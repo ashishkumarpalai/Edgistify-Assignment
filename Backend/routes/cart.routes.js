@@ -97,7 +97,7 @@ cartRouter.delete("/", authenticate, async (req, res) => {
 cartRouter.delete("/:itemId", authenticate, async (req, res) => {
     try {
         const userId = req.body.user; // Extract user ID from authenticated request
-        const itemId = req.body.cartitemid; // Extract item ID from URL params
+        const itemId = req.body.itemid; // Extract item ID from URL params
 
         // Find user's cart
         const cart = await CartModel.findOne({ user: userId });
