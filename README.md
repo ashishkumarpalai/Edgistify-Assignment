@@ -11,6 +11,7 @@ Fullstack (Frontend + Backend)
 ## Deployed App
 - Frontend: https://gleeful-pixie-0fd72f.netlify.app/
 - Backend: https://edgistify-assignment.onrender.com/
+- Postman Collection https://www.postman.com/altimetry-astronomer-93622011/edgistify-assignment/overview
 - Database: MongoDB
 
 ## Directory Structure
