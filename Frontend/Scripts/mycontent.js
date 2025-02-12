@@ -1,43 +1,3 @@
-
-// fetch('http://localhost:3000/cart', {
-//     headers: {
-//         "Content-Type": "application/json",
-//         "Authorization": `${localStorage.getItem('token')}`
-//     }
-// })
-//     .then(response => response.json())
-//     .then(data => {
-//         const contentSection = document.querySelector('.content');
-//         contentSection.innerHTML = ""; // Clear previous content
-
-//         if (data.products && Array.isArray(data.products)) {
-//             data.products.forEach(item => {
-//                 const product = item.product; // Extract product details
-//                 const quantity = item.quantity;
-//                 const cartItemId = item._id; 
-//                 const itemElement = document.createElement('div');
-//                 itemElement.innerHTML = `
-//                 <div style="border: 1px solid #ddd; padding: 15px; margin: 10px; border-radius: 5px;">
-//                     <img src="${product.image}" alt="Product Image" style="width: 150px; height: auto;">
-//                     <h1><span style="color: blue;">Title:-</span> ${product.title}</h1>
-//                     <h2><span style="color: blue;">Price:-</span> ₹${product.price}</h2>
-//                     <p><span style="color: blue;">Description:-</span> ${product.description}</p>
-//                     <p><span style="color: blue;">Availability:-</span> ${product.availablity ? "In Stock" : "Out of Stock"}</p>
-//                     <p><span style="color: blue;">Quantity:-</span> ${quantity}</p>
-//                 </div>
-//             `;
-//                 contentSection.appendChild(itemElement);
-//             });
-//         } else {
-//             console.error('API data is not in expected format:', data);
-//             contentSection.innerHTML = "<p>No products in cart.</p>";
-//         }
-//     })
-//     .catch(error => {
-//         console.error('Error fetching API data:', error);
-//     });
-
-
 document.addEventListener("DOMContentLoaded", function () {
     const contentSection = document.querySelector('.content');
 
@@ -79,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     document.body.insertBefore(sidebar, contentSection);
 
     // Fetch cart data and display products
-    fetch('http://localhost:3000/cart', {
+    fetch('https://edgistify-assignment.onrender.com/cart', {
         headers: {
             "Content-Type": "application/json",
             "Authorization": `${localStorage.getItem('token')}`
@@ -144,7 +104,7 @@ async function placeOrder() {
 
     try {
         // Fetch cart details
-        const cartResponse = await fetch("http://localhost:3000/cart", {
+        const cartResponse = await fetch("https://edgistify-assignment.onrender.com/cart", {
             headers: {
                 "Content-Type": "application/json",
                 "Authorization": token,
@@ -178,7 +138,7 @@ async function placeOrder() {
         }
 
         // Place order request
-        const orderResponse = await fetch("http://localhost:3000/order", {
+        const orderResponse = await fetch("https://edgistify-assignment.onrender.com/order", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
@@ -204,7 +164,7 @@ async function placeOrder() {
 
 // Function to delete all cart items
 function deleteAllCartItems() {
-    fetch('http://localhost:3000/cart', {
+    fetch('https://edgistify-assignment.onrender.com/cart', {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json",
