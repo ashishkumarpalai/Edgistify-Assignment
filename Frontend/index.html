@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edgisitify</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./style/landing.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+</head>
+
+<body>
+    <nav class="nav">
+        <div class="container">
+            <div class="logo">
+                <a href="index.html">Edgisitify</a>
+            </div>
+            <div class="main_list" id="mainListDiv">
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="./page/content.html">Product</a></li>
+                    <li onclick="checkToken()"><a href="#">Cart</a></li>
+                    <!-- <li><a href="./page/about.html">About</a></li> -->
+                    <!-- <li><a href="./page/signup.html">Account</a></li> -->
+                    <li class="dropdown">
+                        <a href="#">Account</a>
+                        <div class="dropdown-content">
+                            <!-- <a href="#" id="uname">Name</a> -->
+                            <a href="./page/signup.html" id="signup">signup</a>
+                            <a href="#" id="logout">Logout</a>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="media_button">
+                <button class="main_media_button" id="mediaButton">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+
+    <!-- home section stars  -->
+    <section class="home" id="home">
+        <div class="content">
+            <h1>Edgisitify Assignment</h1>
+            <p>An easy-to-use tool for managing your ecommerce content. Organize your webpages effortlessly and edit them
+                on the go. Try it for free!</p>
+            <a href="#" class="home-btn">Get it on Chrome</a>
+        </div>
+        <div class="image">
+            <img src="images/illustration-hero.svg" alt="illustration-hero">
+        </div>
+    </section>
+    <!-- home section ends -->
+
+
+    <!-- footer section starts  -->
+    <section class="footer" id="footer">
+        <div class="credit">
+            Created by <a href="#" target="_blank"><span>Ashish
+                    Kumar Palai</span> | All rights reserved</a>
+        </div>
+    </section>
+    <!-- footer section ends -->
+
+</body>
+
+</html>
+<script src="index.js"></script>

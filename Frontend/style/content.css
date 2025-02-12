@@ -1,0 +1,78 @@
+  /* Global styles */
+  body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f5f5f5;
+}
+
+header {
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    padding: 20px 0;
+}
+
+main {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.content {
+    padding: 60px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.content > div {
+    flex: 1;
+    margin: 20px;
+    background-color: #fff;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    padding: 40px;
+    border-radius: 5px;
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    
+}
+
+.content > div:hover {
+    transform: scale(1.03);
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+    .content > div {
+        flex-basis: calc(50% - 20px);
+    }
+}
+
+@media (max-width: 576px) {
+    .content > div {
+        flex-basis: calc(100% - 20px);
+    }
+}
+
+/* Additional styles for an attractive look */
+.content > div {
+    background-color: #fff;
+    color: #333;
+}
+
+.content > div h2 {
+    font-size: 1.5rem;
+}
+
+.content > div p {
+    font-size: 1rem;
+}
